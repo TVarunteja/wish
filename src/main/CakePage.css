@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe Script', cursive;
+    background: linear-gradient(to bottom right, #ffeaf4, #fff5f8);
+  }
+  
+  .cake-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 🌸 Falling petals animation */
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffb6c1 30%, #ff69b4 90%);
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.7;
+    animation: fall 8s linear infinite;
+  }
+  
+  /* Unique petals */
+  .petal:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .petal:nth-child(2) { left: 25%; animation-delay: 2s; }
+  .petal:nth-child(3) { left: 40%; animation-delay: 4s; }
+  .petal:nth-child(4) { left: 60%; animation-delay: 1s; }
+  .petal:nth-child(5) { left: 75%; animation-delay: 3s; }
+  .petal:nth-child(6) { left: 90%; animation-delay: 5s; }
+  
+  .celebrate-text {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #d63384;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #fff;
+    animation: bloom 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes bloom {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+  
+  .cake-image {
+    position: relative;
+    width: 300px;
+    animation: floatCake 5s ease-in-out infinite;
+  }
+  
+  @keyframes floatCake {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  
+  @keyframes flicker {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.2); opacity: 0.8; }
+  }
+  
+  /* 🎉 Extra Confetti Sparkle (Celebration Mode) */
+@keyframes confetti-fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #f1e9c6, #fad0c4);
+    border-radius: 50%;
+    animation: confetti-fall 7s ease-in infinite;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  
+  .confetti:nth-child(1) { left: 5%; animation-delay: 0s; }
+  .confetti:nth-child(2) { left: 15%; animation-delay: 1s; }
+  .confetti:nth-child(3) { left: 30%; animation-delay: 2.5s; }
+  .confetti:nth-child(4) { left: 50%; animation-delay: 3s; }
+  .confetti:nth-child(5) { left: 70%; animation-delay: 1.5s; }
+  .confetti:nth-child(6) { left: 85%; animation-delay: 2.2s; }
+  
+  /* 🌹 Decorative flowers */
+  .flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    z-index: 5;
+  }
+  
+  
+  
+  /* 🧁 Cake box with transparent glass effect and hover open animation */
+  .cake-box {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 192, 203, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(2.4, 1.8, 3, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .cake-box:hover {
+    transform: scale(1.05) rotateX(8deg);
+    box-shadow: 0 12px 40px rgba(255, 105, 180, 0.4);
+  }
+  
+  /* Place this class around your cake image */
+  .cake-image {
+    width: 280px;
+    z-index: 2;
+  }
+  
+  .birthday-text {
+    position: absolute;
+    top: 5%;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d63384;
+    text-shadow: 2px 2px 6px white;
+    animation: moveText 20s linear infinite;
+    z-index: 10;
+  }
+  .birthday-text {
+    position: absolute;
+    top: 5%;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d63384;
+    text-shadow: 2px 2px 6px white;
+    animation: moveText 20s linear infinite;
+    z-index: 10;
+  }
+  .birthday-text {
+    position: absolute;
+    top: 5%;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0e0c0d;
+    text-shadow: 2px 2px 6px white;
+    animation: moveText 20s linear infinite;
+    z-index: 10;
+  }
+  @keyframes moveText {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+
+  .panda-container {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    z-index: 6;
+  }
+  
+  .panda {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .panda:hover {
+    transform: scale(1.1);
+  }
+  
+
+   .slide-banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 182, 193, 0.7);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d63384;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  z-index: 20;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Slider Styles */
+.slider-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .slider-track {
+    position: relative;
+    width: 80%;
+    height: 60px;
+    background-color: #ffc0cb;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #d63384;
+    font-size: 1.2rem;
+  }
+  
+  .slider-thumb {
+    position: absolute;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    cursor: grab;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.1s ease-out;
+    z-index: 2;
+  }
+  
+  .slider-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+       

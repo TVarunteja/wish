@@ -1,0 +1,89 @@
+/* Background with a floral image */
+.message-container {
+    padding: 20px 35px 25px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+    background-image: url('../images/new-2.jpg'); /* Replace with your own image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Transparent container for the message */
+.message-box {
+    background-color: rgba(255, 255, 255, 0.2); /* More transparent white */
+    border-radius: 50px;
+    padding: 80px 30px 30px 30px; /* Extra top padding to leave space for top image */
+    width:100%;
+    height: auto;
+    max-width: 1200px;
+    max-height: 150vh;
+    position: relative; /* To position images inside */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(194, 125, 125, 0.2);
+    backdrop-filter: blur(20px); /* Soft blur */
+}
+
+/* Typewriter effect */
+.typewriter-message {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    color: #000;
+    white-space: pre-wrap; /* Allow multi-line wrapping */
+    overflow: hidden;
+    border-right: 3px solid #000; /* Black blinking cursor */
+    animation: blink 0.75s step-end infinite, shinyText 2s infinite alternate;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Shiny black text animation */
+@keyframes shinyText {
+    0% {
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    }
+}
+
+/* Round image at the left top corner */
+.round-image-top-left {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Round image at the bottom right corner */
+.round-image-bottom-right {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

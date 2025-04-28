@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero-section {
+  background: url('../images/ChatGPT\ Image\ Apr\ 23\,\ 2025\,\ 12_27_13\ PM.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #4a4a4a;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  background-color: #f7d8d8cc;
+  padding: 15px 30px;
+  border-radius: 20px;
+  color: #2b2b2b;
+  box-shadow: 0 14px 66px rgba(229, 181, 181, 0.1);
+
+  /* 👇 Animation styles */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: floatIn 2s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+}
+
+.next-btn {
+  background-color: #e3cde2; /* Baby pink */
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 24px; /* Make the arrow bigger */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(248, 200, 220, 0.4);
+}
+
+
+.next-btn:hover {
+  transform: scale(1.05);
+}
+
+.clock-page {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  min-height: 20vh;
+  background: linear-gradient(185deg, #88e6e6, #d1fad6); /* Cute background */
+}
+
+.clock {
+  width: 170px;
+  height: 150px;
+  background: #fff;
+  border: 8px solid #333;
+  border-radius: 40%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Numbers on clock */
+.number {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.number12 { top: 1px; left: 50%; transform: translateX(-50%); }
+.number3 { right: 1px; top: 50%; transform: translateY(-50%); }
+.number6 { bottom: 0.2px; left: 50%; transform: translateX(-50%); }
+.number9 { left: 1px; top: 50%; transform: translateY(-50%); }
+
+/* Clock Hands */
+.hand {
+  position: absolute;
+  background: #333;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) translateY(-100%) rotate(0deg);
+  border-radius: 5px;
+}
+
+.hour-hand {
+  width: 6px;
+  height: 40px;
+  background: #333;
+}
+
+.minute-hand {
+  width: 3px;
+  height: 50px;
+  background: #e63946; /* Cute red minute hand */
+}
+
+/* Center dot */
+.center-dot {
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock-page {
+  position: absolute;
+  top: 130px;
+  right: 100px;
+}
+
+.clock {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border: 8px solid #333;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.date-text {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 900;
+}
+
+.date-text {
+  position: absolute;
+  bottom: 42px; /* Inside the clock */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2 rem;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 0 5px #e63946, 0 0 10px #e63946, 0 0 15px #e63946, 0 0 20px #e63946;
+  animation: shinyEffect 1.5s ease-in-out infinite; /* Shiny effect */
+}
+
+/* Shiny effect animation */
+@keyframes shinyEffect {
+  0% {
+    text-shadow: 0 0 5px #e63946, 0 0 10px #e63946, 0 0 15px #e63946, 0 0 20px #e63946;
+  }
+  50% {
+    text-shadow: 0 0 10px #e63946, 0 0 20px #e63946, 0 0 30px #e63946, 0 0 40px #e63946;
+  }
+  100% {
+    text-shadow: 0 0 5px #e63946, 0 0 10px #e63946, 0 0 15px #e63946, 0 0 20px #e63946;
+  }
+}
